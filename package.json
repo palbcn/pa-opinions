@@ -2,11 +2,12 @@
   "name": "pa-opinions",
   "version": "0.9.0",
   "description": "PA Opinions Scraper",
+  "main": "server/server.js",
   "type": "module",
   "author": "PA. <palbcn@yahoo.com>",
   "license": "ISC",
   "scripts": {
-    "start": "server/server"
+    "start": "node server/server"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
