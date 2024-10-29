@@ -1,0 +1,19 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Launch current",
+      "type": "node",
+      "request": "launch",
+      "program": "${file}",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "Launch server",
+      "type": "node",
+      "request": "launch",
+      "program": "server/server.js",
+      "skipFiles": ["<node_internals>/**"]
+    }
+  ]
+}

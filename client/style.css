@@ -1,0 +1,128 @@
+html {  box-sizing: border-box; }
+*, *:before, *:after { box-sizing: inherit; }
+html {
+  font-size:18px;
+}
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body {
+  margin: 0;
+}
+a {
+  text-decoration: none;
+}
+body > header {
+  background:  #333333;
+  color: #cccccc;
+  padding: 1rem;
+}
+body > header * {
+  margin: 0; padding:0; 
+}
+body > header > nav {
+  text-align: right;
+}
+body > header a {  
+  color: #99ccff;
+}
+body > main {
+  margin: 0 auto;
+  max-width: 800px;
+  padding-left: 6px;
+}
+article {
+  margin: 1rem;
+  border-top: 1px solid #666666;
+}
+article p, article h2, article h3 {
+  margin-top:0;
+  margin-bottom:0.5rem;
+}
+article h2 {
+  font-size: 1.4rem;
+  font-weight: normal;
+}
+article h3 {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+article main p {
+  margin-bottom: 1rem;
+}
+article p:has(a) {
+  font-size: 0.6rem;
+}
+article > header {  
+  cursor: pointer;
+  margin-bottom: 1rem;
+}
+article > header:hover, article > header:active {
+  background-color: #eeeeee;
+}
+article button {  
+  margin-top: 4px;
+  background-color: #eee;
+  border: 1px solid black;
+  float:right;
+  color: black;
+  cursor: pointer;
+  border-radius: .25rem;  
+  box-shadow: rgba(0, 0, 0, 0.5) 3px 3px 3px;
+}
+article button:active {
+  box-shadow: rgba(0, 0, 0, 0.5) 0 3px 5px inset;
+}
+article button:hover {
+  background-color: white;
+}
+
+i.src {
+  color:white;
+  font-size: small;
+  font-style: normal;
+  padding: 2px 0.6em;
+  border-radius: 5px;
+  vertical-align: middle;
+}
+i.src-EPA {
+  background-color:#eee;
+  color:black; 
+  font-weight:bold;
+}
+i.src-EPA::after {
+  content:"EP";
+}
+i.src-VAN {
+    background-color:#001c4c;
+}
+i.src-VAN::after {
+  content:"LV";
+}
+i.src-NAC {
+  background-color:#fc0;
+  color:black;
+  font-weight:900;
+ 
+}
+i.src-NAC::after {
+  content:"N";
+}
+i.src-ARA {
+  background-color:#00648E; 
+}
+i.src-ARA::after {
+  content:"ara";
+}
+
+footer {
+  background-color: #333333;
+  font-size: 0.8rem;
+  color: #cccccc;
+  padding: 1em;
+  display:flex;
+  flex-direction:row;
+  align-items:center;
+  gap: 1rem;
+}
+
