@@ -2,17 +2,29 @@
   "version": "0.2.0",
   "configurations": [
     {
-      "name": "Launch current",
+      "name": "current file launch",
       "type": "node",
       "request": "launch",
       "program": "${file}",
       "skipFiles": ["<node_internals>/**"]
     },
     {
-      "name": "Launch server",
+      "name": "server launch",
       "type": "node",
       "request": "launch",
       "program": "server/server.js",
+      "skipFiles": ["<node_internals>/**"]
+    },
+    {
+      "name": "netlify functions serve",
+      "type": "node",
+      "request": "launch",
+      "runtimeExecutable": "netlify",
+      "runtimeArgs": ["functions:serve"],
+      "outFiles": [
+        "${workspaceFolder}/.netlify/functions-serve/**/*",
+        "!**/node_modules/**"
+      ],
       "skipFiles": ["<node_internals>/**"]
     }
   ]

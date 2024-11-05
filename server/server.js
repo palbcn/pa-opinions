@@ -21,5 +21,5 @@ app.use('/articles', articlesRouter);
 
 // Start server
 let server = app.listen(process.env.PORT ?? 8080, () => {
-  console.log(`PA Opinion Articles Server is open for e-business on http://localhost:${server.address().port}`);
+  console.log(`PA Opinion Articles Server is open for e-business on ${server.address().port}`);
 });

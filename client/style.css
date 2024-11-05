@@ -4,7 +4,7 @@ html {
   font-size:18px;
 }
 body {
-  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-family: "IBM Plex Serif", Georgia, Times, serif;
 }
 body {
   margin: 0;
@@ -41,11 +41,11 @@ article p, article h2, article h3 {
 }
 article h2 {
   font-size: 1.4rem;
-  font-weight: normal;
+  font-weight:500;
 }
 article h3 {
   font-size: 1.2rem;
-  font-weight: normal;
+  font-weight: 300;
 }
 article main p {
   margin-bottom: 1rem;
@@ -76,7 +76,15 @@ article button:active {
 article button:hover {
   background-color: white;
 }
-
+body > header nav a:not(:has(i)){
+  background-color:black;
+  padding: 0 0.8em;
+  border-radius: 5px;
+    vertical-align: middle;
+}
+body > header nav span {
+  margin-left:2rem;
+}
 i.src {
   color:white;
   font-size: small;
@@ -114,8 +122,20 @@ i.src-ARA {
 i.src-ARA::after {
   content:"ara";
 }
+i.src-ECO {
+  background-color: #0d3749;
+}
+i.src-ECO::after {
+  content:"EC";
+}
+i.src-DIA {
+  background-color: #004a7f;
+}
+i.src-DIA::after {
+  content:"eD";
+}
 
-footer {
+body > footer {
   background-color: #333333;
   font-size: 0.8rem;
   color: #cccccc;
@@ -125,4 +145,19 @@ footer {
   align-items:center;
   gap: 1rem;
 }
+body > footer a {  
+  color: #99ccff;
+}
 
+#date-selection-form {
+  display:none;
+  position:absolute;
+  top:2rem; 
+  right: 1rem;
+  width: 8rem;
+  height: 2rem;
+  padding: 0.2rem 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #666;
+  background-color: white;
+}

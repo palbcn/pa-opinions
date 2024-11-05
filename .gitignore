@@ -1,5 +1,11 @@
-node_modules
+# secrets
 .env
-.data
+
+# externals and intermediary
+node_modules
+.netlify
 www
+
+# internals out of dev scope
+.data
 old

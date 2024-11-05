@@ -7,12 +7,18 @@
   "author": "PA. <palbcn@yahoo.com>",
   "license": "ISC",
   "scripts": {
-    "start": "node server/server"
+    "start": "node server/server",
+    "netlify-dev": "netlify dev",
+    "netlify-func": "netlify functions:serve",
+    "netlify-deploy": "rem git commit -a -m && rem git push"
   },
   "dependencies": {
     "cheerio": "^1.0.0",
     "express": "^4.21.1",
     "sqlite": "^5.1.1",
     "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "netlify-cli": "^12.2.4"
   }
 }

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Test Calendar</title>
+  <script src="calendar.js"></script>
+  <script defer>
+    document.addEventListener('DOMContentLoaded', () => {
+      let container = document.getElementById('calendar1');
+      renderCalendar(container, new Date())
+    })
+  </script>
+</head>
+
+<body>
+  <h1>Calendar test</h1>
+  <section id="calendar1"></section>
+</body>
+
+
+</html>

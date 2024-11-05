@@ -12,6 +12,21 @@ function headerClick(e) {
 function mainNavClick(e) {
 
 }
+
+function dateSelected(e) {
+  // on date selected 
+  // TODO render articles for date selected
+  console.log(e.target.value);
+  // hide the date selection form
+  let dateSelectionForm = document.getElementById('date-selection-form');
+  dateSelectionForm.style.display = 'none';
+}
+function selectDateButtonClick(e) {
+  // open popup for date selection
+  //   with a form with a input date field
+  let dateSelectionForm = document.getElementById('date-selection-form');
+  dateSelectionForm.style.display = 'block';
+}
 function contentClick(e) {
   // toggle visibility to the article 
   let content = e.currentTarget;
@@ -50,6 +65,10 @@ function addOnClickToArticles() {
 
 document.addEventListener("DOMContentLoaded", function (e) {
   console.log("DOMContentLoaded", e);
+  let selectDateButton = document.getElementById('select-date-button');
+  selectDateButton.addEventListener("click", selectDateButtonClick);
+  let dateSelectionForm = document.getElementById('date-selection-form');
+  dateSelectionForm.getElementsByTagName('input')[0].addEventListener('change', dateSelected);
 });
 
 // invoke addOnclick every new articles are loaded to DOM

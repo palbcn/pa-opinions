@@ -13,23 +13,36 @@
 
 <body>
   <header>
-    <h1>Scraping d'opinió PA</h1>
+    <h1><a href="#" hx-get="/articles?page=1" hx-target="#articles">Scraping d'opinió PA</a></h1>
     <nav>
+      <a href="#" hx-get="/articles?page=1" hx-target="#articles">✱</a>
       <a href="#" hx-get="/articles?source=ARA&page=1" hx-target="#articles"><i class="src src-ARA"></i></a>
       <a href="#" hx-get="/articles?source=VAN&page=1" hx-target="#articles"><i class="src src-VAN"></i></a>
       <a href="#" hx-get="/articles?source=EPA&page=1" hx-target="#articles"><i class="src src-EPA"></i></a>
       <a href="#" hx-get="/articles?source=NAC&page=1" hx-target="#articles"><i class="src src-NAC"></i></a>
+      <a href="#" hx-get="/articles?source=ECO&page=1" hx-target="#articles"><i class="src src-ECO"></i></a>
+      <a href="#" hx-get="/articles?source=DIA&page=1" hx-target="#articles"><i class="src src-DIA"></i></a>
       <span id="nav-links">
         <a href="#" hx-get="/articles?page=1" rel="prev" hx-target="#articles">⟪</a>
         <a href="#" hx-get="/articles?page=2" rel="next" hx-target="#articles">⟫</a>
       </span>
+      <button id="select-date-button">DATE</button>
     </nav>
+    <form id="date-selection-form">
+      <input type="date" name="start" hx-get="/articles" hx-target="#articles">
+    </form>
   </header>
-  <main id="articles" hx-get="/articles?page=1" hx-trigger="load">
+  <main>
+    <h2><span id="articles-source"></span> - Pàgina <span id="articles-page"></span></h2>
+    <div id="articles" hx-get="/articles?page=1" hx-trigger="load"></div>
   </main>
   <footer>
     <img width="64" src="laperalimonera.white.dark.png">
     <p>Una frikada de PA. &copy; La Pera Limonera 2022. All Rights Reserved.</p>
+    <span id="nav-links-footer">
+      <a href="#" hx-get="/articles?page=1" rel="prev" hx-target="#articles">⟪</a>
+      <a href="#" hx-get="/articles?page=2" rel="next" hx-target="#articles">⟫</a>
+    </span>
   </footer>
 </body>
 
